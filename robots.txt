@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zenkiux.github.io/bookerlife-site/sitemap.xml

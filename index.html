@@ -1,7 +1,392 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght,SOFT@9..144,400..600,0..100&display=swap"><link rel="stylesheet" href="style.css"><title>BookerLife</title><meta name="description" content="A reading tracker for iPhone and Mac built around a bookshelf that looks like yours. No account, no ads, no tracking."></head><body><main class="page">
-<header class="head"><img src="icon.png" alt=""><a class="name" href="index.html">BookerLife</a><nav aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav></header>
-<section class="title"><img src="icon.png" alt="BookerLife app icon" width="88" height="88"><h1>BookerLife</h1><p class="lede">A reading tracker for iPhone and Mac, built around a bookshelf that looks like yours: every book at its real size, with its real cover.</p></section>
-<p>Log pages in two taps, keep every reread, write down the lines you want to remember, and see your year in books. Bring your history from Goodreads or StoryGraph, and export everything whenever you like.</p>
-<p>Your library stays on your devices and in your own iCloud. There is no BookerLife account and no server.</p>
-<ul class="parts"><li><a href="privacy.html">Privacy<span>What the app collects: nothing</span></a></li><li><a href="support.html">Support<span>Import, sync, purchases, contact</span></a></li></ul>
-<footer class="foot">BookerLife is an independent app for iPhone and Mac. No account, no ads, no tracking.</footer></main></body></html>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BookerLife: a private reading tracker for iPhone and Mac</title>
+<meta name="description" content="BookerLife is a private, local-first reading tracker for iPhone and Mac, built around a bookshelf of your real covers. Track reading, keep quotes and see your year in books. No account, no ads, no tracking.">
+<meta name="theme-color" content="#100E15">
+<link rel="canonical" href="https://zenkiux.github.io/bookerlife-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BookerLife">
+<meta property="og:title" content="BookerLife: your reading life, beautifully kept">
+<meta property="og:description" content="A private reading tracker for iPhone and Mac, built around a bookshelf of your real covers. No account, no ads, no tracking.">
+<meta property="og:url" content="https://zenkiux.github.io/bookerlife-site/">
+<meta property="og:image" content="https://zenkiux.github.io/bookerlife-site/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/Fraunces-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.className = "js";</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="BookerLife home"><img src="assets/img/icon-160.png" alt="" width="30" height="30">BookerLife</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" data-menu><span></span><span></span><span class="sr-only">Menu</span></button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#reading" data-spy="reading">Features</a></li>
+      <li><a href="#shelf" data-spy="shelf">The Bookshelf</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li class="status-item"><span class="status">Coming to iPhone and Mac</span></li>
+    </ul>
+    <span class="status">Coming to iPhone and Mac</span>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="display" id="hero-title" data-enter style="--e:0">Every book you’ve read. <em>Every page that mattered.</em></h1>
+      <p class="lede" data-enter style="--e:1">Meet your personal reading library. Track your books, revisit favourite passages, and watch your collection come to life.</p>
+      <ul class="facts" role="list" data-enter style="--e:2">
+        <li>For iPhone and Mac</li>
+        <li>No account</li>
+        <li>No ads or tracking</li>
+      </ul>
+      <div class="hero-actions" data-enter style="--e:3">
+        <span class="status">Coming to iPhone and Mac</span>
+        <a class="btn btn-quiet" href="#shelf">See the bookshelf</a>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="shelf" aria-hidden="true">
+        <ul class="row" role="list"><!--shelf:hero static eager remains pride circe achilles piranesi midnight normal educated-->
+<li class="book" data-k="remains" data-title="The Remains of the Day" data-author="Kazuo Ishiguro" data-pages="245" data-year="1989" data-publisher="Vintage International" data-subject="Literary fiction" data-color="#291B13" data-h="20.3" style="--h:20.3"><img src="assets/covers/remains.jpg" alt="The Remains of the Day by Kazuo Ishiguro" width="332" height="500" decoding="async"></li>
+<li class="book" data-k="pride" data-title="Pride and Prejudice" data-author="Jane Austen" data-pages="435" data-year="1813" data-publisher="Penguin Books" data-subject="Classics" data-color="#534436" data-h="19.8" style="--h:19.8"><img src="assets/covers/pride.jpg" alt="Pride and Prejudice by Jane Austen" width="320" height="500" decoding="async"></li>
+<li class="book" data-k="circe" data-title="Circe" data-author="Madeline Miller" data-pages="393" data-year="2018" data-publisher="Little, Brown and Company" data-subject="Fantasy" data-color="#7A5520" data-h="21" style="--h:21"><img src="assets/covers/circe.jpg" alt="Circe by Madeline Miller" width="315" height="475" decoding="async"></li>
+<li class="book" data-k="achilles" data-title="The Song of Achilles" data-author="Madeline Miller" data-pages="378" data-year="2011" data-publisher="Ecco" data-subject="Fantasy" data-color="#4F8A9A" data-h="20.3" style="--h:20.3"><img src="assets/covers/achilles.jpg" alt="The Song of Achilles by Madeline Miller" width="331" height="500" decoding="async"></li>
+<li class="book" data-k="piranesi" data-title="Piranesi" data-author="Susanna Clarke" data-pages="272" data-year="2020" data-publisher="Bloomsbury Publishing" data-subject="Fantasy" data-color="#201917" data-h="21.6" style="--h:21.6"><img src="assets/covers/piranesi.jpg" alt="Piranesi by Susanna Clarke" width="353" height="500" decoding="async"></li>
+<li class="book" data-k="midnight" data-title="The Midnight Library" data-author="Matt Haig" data-pages="288" data-year="2020" data-publisher="Viking" data-subject="Literary fiction" data-color="#2C3642" data-h="21.6" style="--h:21.6"><img src="assets/covers/midnight.jpg" alt="The Midnight Library by Matt Haig" width="331" height="500" decoding="async"></li>
+<li class="book" data-k="normal" data-title="Normal People" data-author="Sally Rooney" data-pages="288" data-year="2018" data-publisher="Hogarth" data-subject="Literary fiction" data-color="#2F4B44" data-h="21.6" style="--h:21.6"><img src="assets/covers/normal.jpg" alt="Normal People by Sally Rooney" width="325" height="500" decoding="async"></li>
+<li class="book" data-k="educated" data-title="Educated" data-author="Tara Westover" data-pages="334" data-year="2018" data-publisher="Random House" data-subject="Nonfiction" data-color="#E9E2D6" data-h="24.1" style="--h:24.1"><img src="assets/covers/educated.jpg" alt="Educated by Tara Westover" width="329" height="500" decoding="async"></li>
+<!--/shelf--></ul>
+        <div class="board"></div>
+      </div>
+      <figure class="phone" data-enter style="--e:2">
+        <img src="assets/shots/today.jpg" width="640" height="1391" fetchpriority="high" alt="The BookerLife Today screen: Project Hail Mary at page 332 of 476, 70 percent read, with a Continue reading button, 20 pages today, a 14-day streak and 15 books this year.">
+      </figure>
+    </div>
+  </div>
+  <p class="wrap caption figure-note" data-enter style="--e:4">Screenshot from the current pre-release build, with a sample library.</p>
+</section>
+
+<!-- Signature shelf -->
+<section class="section" id="shelf" aria-labelledby="shelf-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 class="h2" id="shelf-title">A library that’s unmistakably yours.</h2>
+      <p class="lede">Every book stands at its real size, with its real cover. Choose the boards, the wall and the light, sort by author, colour or height, then take a book down for a closer look.</p>
+    </div>
+
+    <div class="shelf-controls" data-shelf-controls hidden>
+      <div>
+        <span class="control-label" id="look-label">Look</span>
+        <div class="seg" role="group" aria-labelledby="look-label" data-looks>
+          <button type="button" aria-pressed="true" data-look="gallery" data-name="pale ash on charcoal, cool spots">Gallery</button>
+          <button type="button" aria-pressed="false" data-look="nocturne" data-name="ebonised boards in violet light">Nocturne<span class="plus" aria-hidden="true"></span><span class="sr-only"> (Plus)</span></button>
+          <button type="button" aria-pressed="false" data-look="atelier" data-name="birch ply on white, north light">Atelier<span class="plus" aria-hidden="true"></span><span class="sr-only"> (Plus)</span></button>
+          <button type="button" aria-pressed="false" data-look="reading" data-name="walnut, bottle green, one warm lamp">Reading room<span class="plus" aria-hidden="true"></span><span class="sr-only"> (Plus)</span></button>
+          <button type="button" aria-pressed="false" data-look="brutalist" data-name="smoked oak on board-formed concrete">Brutalist<span class="plus" aria-hidden="true"></span><span class="sr-only"> (Plus)</span></button>
+          <button type="button" aria-pressed="false" data-look="vitrine" data-name="glass shelves on linen">Vitrine<span class="plus" aria-hidden="true"></span><span class="sr-only"> (Plus)</span></button>
+        </div>
+      </div>
+      <div>
+        <span class="control-label" id="sort-label">Sort</span>
+        <div class="seg" role="group" aria-labelledby="sort-label" data-sorts>
+          <button type="button" aria-pressed="true" data-sort="hand">By hand</button>
+          <button type="button" aria-pressed="false" data-sort="author">Author</button>
+          <button type="button" aria-pressed="false" data-sort="title">Title</button>
+          <button type="button" aria-pressed="false" data-sort="colour">Colour</button>
+          <button type="button" aria-pressed="false" data-sort="height">Height</button>
+        </div>
+      </div>
+      <p class="look-name" aria-live="polite" data-look-name>Gallery: pale ash on charcoal, cool spots</p>
+    </div>
+
+    <div class="shelf-stage" data-stage>
+      <div class="shelf wall" data-look="gallery" data-shelf>
+        <ul class="row" role="list" data-row><!--shelf:stage1 pick pride piranesi circe achilles tomorrow hailmary midnight dune babel klara habits-->
+<li class="book" data-k="pride" data-title="Pride and Prejudice" data-author="Jane Austen" data-pages="435" data-year="1813" data-publisher="Penguin Books" data-subject="Classics" data-color="#534436" data-h="19.8" style="--h:19.8"><button type="button" class="book-btn" aria-label="Pride and Prejudice by Jane Austen" aria-pressed="false"><img src="assets/covers/pride.jpg" alt="" width="320" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="piranesi" data-title="Piranesi" data-author="Susanna Clarke" data-pages="272" data-year="2020" data-publisher="Bloomsbury Publishing" data-subject="Fantasy" data-color="#201917" data-h="21.6" style="--h:21.6"><button type="button" class="book-btn" aria-label="Piranesi by Susanna Clarke" aria-pressed="false"><img src="assets/covers/piranesi.jpg" alt="" width="353" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="circe" data-title="Circe" data-author="Madeline Miller" data-pages="393" data-year="2018" data-publisher="Little, Brown and Company" data-subject="Fantasy" data-color="#7A5520" data-h="21" style="--h:21"><button type="button" class="book-btn" aria-label="Circe by Madeline Miller" aria-pressed="false"><img src="assets/covers/circe.jpg" alt="" width="315" height="475" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="achilles" data-title="The Song of Achilles" data-author="Madeline Miller" data-pages="378" data-year="2011" data-publisher="Ecco" data-subject="Fantasy" data-color="#4F8A9A" data-h="20.3" style="--h:20.3"><button type="button" class="book-btn" aria-label="The Song of Achilles by Madeline Miller" aria-pressed="false"><img src="assets/covers/achilles.jpg" alt="" width="331" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="tomorrow" data-title="Tomorrow, and Tomorrow, and Tomorrow" data-author="Gabrielle Zevin" data-pages="401" data-year="2022" data-publisher="Knopf" data-subject="Literary fiction" data-color="#979D8E" data-h="24.3" style="--h:24.3"><button type="button" class="book-btn" aria-label="Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin" aria-pressed="false"><img src="assets/covers/tomorrow.jpg" alt="" width="329" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="hailmary" data-title="Project Hail Mary" data-author="Andy Weir" data-pages="476" data-year="2021" data-publisher="Ballantine Books" data-subject="Science fiction" data-color="#433D27" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Project Hail Mary by Andy Weir" aria-pressed="false"><img src="assets/covers/hailmary.jpg" alt="" width="265" height="400" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="midnight" data-title="The Midnight Library" data-author="Matt Haig" data-pages="288" data-year="2020" data-publisher="Viking" data-subject="Literary fiction" data-color="#2C3642" data-h="21.6" style="--h:21.6"><button type="button" class="book-btn" aria-label="The Midnight Library by Matt Haig" aria-pressed="false"><img src="assets/covers/midnight.jpg" alt="" width="331" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="dune" data-title="Dune" data-author="Frank Herbert" data-pages="535" data-year="1965" data-publisher="Ace Books" data-subject="Science fiction" data-color="#C4673F" data-h="17.5" style="--h:17.5"><button type="button" class="book-btn" aria-label="Dune by Frank Herbert" aria-pressed="false"><img src="assets/covers/dune.jpg" alt="" width="265" height="475" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="babel" data-title="Babel" data-author="R. F. Kuang" data-pages="545" data-year="2022" data-publisher="Harper Voyager" data-subject="Fantasy" data-color="#3C3B3A" data-h="23.5" style="--h:23.5"><button type="button" class="book-btn" aria-label="Babel by R. F. Kuang" aria-pressed="false"><img src="assets/covers/babel.jpg" alt="" width="329" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="klara" data-title="Klara and the Sun" data-author="Kazuo Ishiguro" data-pages="303" data-year="2021" data-publisher="Knopf" data-subject="Literary fiction" data-color="#E4574A" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Klara and the Sun by Kazuo Ishiguro" aria-pressed="false"><img src="assets/covers/klara.jpg" alt="" width="296" height="450" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="habits" data-title="Atomic Habits" data-author="James Clear" data-pages="320" data-year="2018" data-publisher="Avery" data-subject="Nonfiction" data-color="#EAE2D1" data-h="23.5" style="--h:23.5"><button type="button" class="book-btn" aria-label="Atomic Habits by James Clear" aria-pressed="false"><img src="assets/covers/habits.jpg" alt="" width="331" height="500" loading="lazy" decoding="async"></button></li>
+<!--/shelf--></ul>
+        <div class="board"></div>
+        <ul class="row" role="list" data-row><!--shelf:stage2 pick remains normal evelyn crawdads chemistry copperhead educated sapiens kahneman body fourth-->
+<li class="book" data-k="remains" data-title="The Remains of the Day" data-author="Kazuo Ishiguro" data-pages="245" data-year="1989" data-publisher="Vintage International" data-subject="Literary fiction" data-color="#291B13" data-h="20.3" style="--h:20.3"><button type="button" class="book-btn" aria-label="The Remains of the Day by Kazuo Ishiguro" aria-pressed="false"><img src="assets/covers/remains.jpg" alt="" width="332" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="normal" data-title="Normal People" data-author="Sally Rooney" data-pages="288" data-year="2018" data-publisher="Hogarth" data-subject="Literary fiction" data-color="#2F4B44" data-h="21.6" style="--h:21.6"><button type="button" class="book-btn" aria-label="Normal People by Sally Rooney" aria-pressed="false"><img src="assets/covers/normal.jpg" alt="" width="325" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="evelyn" data-title="The Seven Husbands of Evelyn Hugo" data-author="Taylor Jenkins Reid" data-pages="400" data-year="2017" data-publisher="Washington Square Press" data-subject="Literary fiction" data-color="#2F5A3A" data-h="21" style="--h:21"><button type="button" class="book-btn" aria-label="The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid" aria-pressed="false"><img src="assets/covers/evelyn.jpg" alt="" width="321" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="crawdads" data-title="Where the Crawdads Sing" data-author="Delia Owens" data-pages="384" data-year="2018" data-publisher="G. P. Putnam’s Sons" data-subject="Literary fiction" data-color="#BF8D76" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Where the Crawdads Sing by Delia Owens" aria-pressed="false"><img src="assets/covers/crawdads.jpg" alt="" width="332" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="chemistry" data-title="Lessons in Chemistry" data-author="Bonnie Garmus" data-pages="390" data-year="2022" data-publisher="Doubleday" data-subject="Literary fiction" data-color="#CF655A" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Lessons in Chemistry by Bonnie Garmus" aria-pressed="false"><img src="assets/covers/chemistry.jpg" alt="" width="328" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="copperhead" data-title="Demon Copperhead" data-author="Barbara Kingsolver" data-pages="548" data-year="2022" data-publisher="Harper" data-subject="Literary fiction" data-color="#BCB5A9" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Demon Copperhead by Barbara Kingsolver" aria-pressed="false"><img src="assets/covers/copperhead.jpg" alt="" width="331" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="educated" data-title="Educated" data-author="Tara Westover" data-pages="334" data-year="2018" data-publisher="Random House" data-subject="Nonfiction" data-color="#E9E2D6" data-h="24.1" style="--h:24.1"><button type="button" class="book-btn" aria-label="Educated by Tara Westover" aria-pressed="false"><img src="assets/covers/educated.jpg" alt="" width="329" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="sapiens" data-title="Sapiens" data-author="Yuval Noah Harari" data-pages="443" data-year="2011" data-publisher="Harper" data-subject="Nonfiction" data-color="#F1ECE6" data-h="23.4" style="--h:23.4"><button type="button" class="book-btn" aria-label="Sapiens by Yuval Noah Harari" aria-pressed="false"><img src="assets/covers/sapiens.jpg" alt="" width="316" height="499" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="kahneman" data-title="Thinking, Fast and Slow" data-author="Daniel Kahneman" data-pages="499" data-year="2011" data-publisher="Farrar, Straus and Giroux" data-subject="Nonfiction" data-color="#F2F0EA" data-h="20.8" style="--h:20.8"><button type="button" class="book-btn" aria-label="Thinking, Fast and Slow by Daniel Kahneman" aria-pressed="false"><img src="assets/covers/kahneman.jpg" alt="" width="334" height="499" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="body" data-title="The Body Keeps the Score" data-author="Bessel van der Kolk" data-pages="464" data-year="2014" data-publisher="Penguin Books" data-subject="Nonfiction" data-color="#5282B4" data-h="21.3" style="--h:21.3"><button type="button" class="book-btn" aria-label="The Body Keeps the Score by Bessel van der Kolk" aria-pressed="false"><img src="assets/covers/body.jpg" alt="" width="325" height="500" loading="lazy" decoding="async"></button></li>
+<li class="book" data-k="fourth" data-title="Fourth Wing" data-author="Rebecca Yarros" data-pages="517" data-year="2023" data-publisher="Entangled Publishing" data-subject="Fantasy" data-color="#1D1B18" data-h="23.5" style="--h:23.5"><button type="button" class="book-btn" aria-label="Fourth Wing by Rebecca Yarros" aria-pressed="false"><img src="assets/covers/fourth.jpg" alt="" width="329" height="500" loading="lazy" decoding="async"></button></li>
+<!--/shelf--></ul>
+        <div class="board"></div>
+        <div class="floor"></div>
+      </div>
+    </div>
+
+    <div class="shelf-detail" data-detail aria-live="polite" hidden>
+      <p class="body">Choose a book to take it off the shelf.</p>
+    </div>
+    <p class="caption" style="margin-top: var(--s4)">A recreation of the app’s shelf in its own colours, with the sample library. Gallery is free; the other five looks come with BookerLife Plus.</p>
+
+    <div class="ed" style="margin-top: var(--section)">
+      <div class="ed-copy" data-reveal>
+        <h3 class="h3">The real thing, on your iPhone and Mac.</h3>
+        <ul class="points" role="list">
+          <li><strong>Real sizes.</strong> Books use their real or estimated height, and the shelf adds up its length in centimetres.</li>
+          <li><strong>Turn a book over.</strong> Pull it out to see the spine and the back, with the real blurb.</li>
+          <li><strong>Sections and filters.</strong> Group by status, author, genre, year or format.</li>
+          <li><strong>Make it yours.</strong> Named shelves, decorative objects and a year shelf, with more of each in Plus.</li>
+        </ul>
+      </div>
+      <figure data-reveal>
+        <div class="phone" style="margin-inline:auto"><img src="assets/shots/shelf.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The BookerLife Shelf screen on iPhone: 22 books, 34 cm of books, sorted by author, with covers face out on two boards."></div>
+        <figcaption class="caption figure-note">The Shelf tab in the current build.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Reading -->
+<section class="section" id="reading" aria-labelledby="reading-title">
+  <div class="wrap ed">
+    <div class="ed-copy" data-reveal>
+      <h2 class="h2" id="reading-title">Make every reading moment count.</h2>
+      <p class="lede">Log pages in two taps or run a reading session with a timer. Track print and audiobooks, even both for one book, and watch your goal move with you.</p>
+      <div class="seg" role="group" aria-label="Demo step" data-steps hidden>
+        <button type="button" aria-pressed="true" data-step="start">Start reading</button>
+        <button type="button" aria-pressed="false" data-step="track">Track progress</button>
+        <button type="button" aria-pressed="false" data-step="finish">Finish a book</button>
+      </div>
+      <ul class="points" role="list">
+        <li><strong>Sessions.</strong> A timer with a Live Activity on iPhone, and a wrap-up when you stop.</li>
+        <li><strong>Goals.</strong> Books, pages or minutes, yearly or monthly, with pace and a forecast.</li>
+        <li><strong>Every reading kept.</strong> Rereads, pauses and did-not-finish, with quarter-star ratings.</li>
+      </ul>
+    </div>
+    <div class="demo" data-demo data-state="start" data-reveal>
+      <span class="demo-label">Illustrative demo</span>
+      <div class="now">
+        <img src="assets/covers/hailmary.jpg" width="265" height="400" loading="lazy" decoding="async" alt="Project Hail Mary by Andy Weir">
+        <div>
+          <div class="swap state">
+            <span data-when="start">Reading session</span>
+            <span data-when="track" aria-hidden="true">Currently reading</span>
+            <span data-when="finish" aria-hidden="true">Finished today</span>
+          </div>
+          <h3>Project Hail Mary</h3>
+          <p class="by">Andy Weir</p>
+        </div>
+      </div>
+      <div class="meter">
+        <div class="meter-top"><span data-page>Page 332 of 476</span><span data-pct>70%</span></div>
+        <div class="track"><i data-bar style="--p:.70"></i></div>
+      </div>
+      <div class="swap">
+        <div class="timer" data-when="start"><b data-clock>00:00</b><span>Session running</span></div>
+        <div class="timer" data-when="track" aria-hidden="true"><b>18 min</b><span>20 pages in this session</span></div>
+        <div class="timer" data-when="finish" aria-hidden="true"><div class="rating" role="img" aria-label="Rated 4.5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span class="half">★</span></div><span>Book 16 this year</span></div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><b data-today>0</b><span>pages today</span></div>
+        <div class="tile"><b>14</b><span>day streak</span></div>
+        <div class="tile"><b data-year>15</b><span>books this year</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Remember -->
+<section class="section" id="journal" aria-labelledby="journal-title">
+  <div class="wrap">
+    <div class="ed flip">
+      <div class="ed-copy" data-reveal>
+        <h2 class="h2" id="journal-title">Keep the words worth remembering.</h2>
+        <p class="lede">Save quotes and notes as you read, photograph a page to keep a line, and bring in your Kindle highlights. Rediscover brings old favourites back when you least expect them.</p>
+      </div>
+      <article class="page" data-page-reveal aria-label="Sample journal entry">
+        <div class="folio"><span>Pride and Prejudice</span><span>Page 1</span></div>
+        <blockquote><span class="hl">It is a truth universally acknowledged,</span> that a single man in possession of a good fortune, must be in want of a wife.</blockquote>
+        <cite>Jane Austen, 1813. Saved from a photo of the page.</cite>
+        <div class="note"><b>Note</b>Reread the first chapter after finishing. Mrs Bennet is even funnier the second time.</div>
+        <div class="note"><b>Journal, with a spoiler</b><button type="button" class="spoiler-btn" data-spoiler aria-expanded="false"><span class="spoiler-text">The second proposal works because the first one went so badly.</span><span class="spoiler-hint">Tap to reveal</span></button></div>
+      </article>
+    </div>
+    <div class="journal-list">
+      <div><h3>Quotes from a photo</h3><p>Pick the lines you want; Apple’s Vision reads them on your device and the photo is deleted.</p></div>
+      <div><h3>Kindle highlights</h3><p>Import My Clippings.txt, a Kindle notebook export or a highlights CSV, with a preview first.</p></div>
+      <div><h3>Spoiler-safe journal</h3><p>Notes, quotes and highlights by page, with spoilers blurred until you tap.</p></div>
+      <div><h3>Rediscover</h3><p>A quote of the day, what you read on this day, and the occasional “remember this one?”</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Insights -->
+<section class="section" id="insights" aria-labelledby="insights-title">
+  <div class="wrap ed">
+    <div class="ed-copy">
+      <div data-reveal>
+        <h2 class="h2" id="insights-title">See the story behind your reading.</h2>
+        <p class="lede" style="margin-top: var(--s5)">Books finished, pages read, favourite authors and genres, a 26-week calendar and a comparison with last year. At the end of it, your Wrapped.</p>
+      </div>
+      <div class="chart" data-chart>
+        <div class="chart-head"><b>15 books finished</b><span class="caption">Sample library, 2026</span></div>
+        <div class="bars" role="img" aria-label="Books finished per month in the sample library: January 1, February 2, March 1, April 2, May 1, June 2, July 1, August 2, September 2, October 1.">
+          <span style="--v:1;--i:0"><i></i>J</span><span style="--v:2;--i:1"><i></i>F</span><span style="--v:1;--i:2"><i></i>M</span><span style="--v:2;--i:3"><i></i>A</span><span style="--v:1;--i:4"><i></i>M</span><span style="--v:2;--i:5"><i></i>J</span><span style="--v:1;--i:6"><i></i>J</span><span style="--v:2;--i:7"><i></i>A</span><span style="--v:2;--i:8"><i></i>S</span><span style="--v:1;--i:9"><i></i>O</span><span class="future" style="--v:0;--i:10"><i></i>N</span><span class="future" style="--v:0;--i:11"><i></i>D</span>
+        </div>
+        <div class="genres" role="list" aria-label="Finished books by genre in the sample library">
+          <div class="genre" role="listitem"><span>Literary fiction</span><span class="gt"><i style="--v:1"></i></span><b>5</b></div>
+          <div class="genre" role="listitem"><span>Nonfiction</span><span class="gt"><i style="--v:1"></i></span><b>5</b></div>
+          <div class="genre" role="listitem"><span>Fantasy</span><span class="gt"><i style="--v:.6"></i></span><b>3</b></div>
+          <div class="genre" role="listitem"><span>Science fiction</span><span class="gt"><i style="--v:.2"></i></span><b>1</b></div>
+          <div class="genre" role="listitem"><span>Classics</span><span class="gt"><i style="--v:.2"></i></span><b>1</b></div>
+        </div>
+      </div>
+    </div>
+    <figure data-reveal>
+      <div class="insight-shots">
+        <div class="phone"><img src="assets/shots/insights.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The Insights screen: 15 finished in 2026, 6,447 pages, an average rating of 4.1, and a 14-day reading streak."></div>
+        <div class="phone"><img src="assets/shots/wrapped.jpg" width="640" height="1391" loading="lazy" decoding="async" alt="The 2026 Wrapped cover page: A year well read. 15 books, 6,447 pages, 5 genres, with a fan of covers."></div>
+      </div>
+      <figcaption class="caption figure-note">Insights and Wrapped in the current build, with the sample library.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Collections and discovery -->
+<section class="section" id="discover" aria-labelledby="discover-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 class="h2" id="discover-title">Find your next book on your own shelves.</h2>
+      <p class="lede">Gather books into collections, keep series in order, and let Discover suggest what to read next from what you own and love, with the reason for each pick.</p>
+    </div>
+    <div class="tabs">
+      <div class="seg" role="tablist" aria-label="Organise and discover" data-tabs>
+        <button type="button" role="tab" id="tab-col" aria-selected="true" aria-controls="panel-col">Collections</button>
+        <button type="button" role="tab" id="tab-pick" aria-selected="false" aria-controls="panel-pick" tabindex="-1">Help me pick</button>
+        <button type="button" role="tab" id="tab-series" aria-selected="false" aria-controls="panel-series" tabindex="-1">Series</button>
+      </div>
+    </div>
+    <div class="panels">
+      <div class="panel" role="tabpanel" id="panel-col" aria-labelledby="tab-col" tabindex="0">
+        <div class="stacks">
+          <div class="stack"><div class="stack-covers"><img src="assets/covers/klara.jpg" alt="" loading="lazy" width="296" height="450"><img src="assets/covers/chemistry.jpg" alt="" loading="lazy" width="328" height="500"><img src="assets/covers/copperhead.jpg" alt="" loading="lazy" width="331" height="500"><img src="assets/covers/babel.jpg" alt="" loading="lazy" width="329" height="500"></div><h3>Up next</h3><p>Four books waiting, in the order you want them.</p></div>
+          <div class="stack"><div class="stack-covers"><img src="assets/covers/tomorrow.jpg" alt="" loading="lazy" width="329" height="500"><img src="assets/covers/piranesi.jpg" alt="" loading="lazy" width="353" height="500"><img src="assets/covers/evelyn.jpg" alt="" loading="lazy" width="321" height="500"></div><h3>Book club</h3><p>A hand-picked collection. Make as many as you like.</p></div>
+          <div class="stack"><div class="stack-covers"><img src="assets/covers/remains.jpg" alt="" loading="lazy" width="332" height="500"><img src="assets/covers/midnight.jpg" alt="" loading="lazy" width="331" height="500"><img src="assets/covers/normal.jpg" alt="" loading="lazy" width="325" height="500"></div><h3>Under 300 pages <span class="tag">Plus</span></h3><p>A smart collection that fills itself from rules you set.</p></div>
+        </div>
+        <p class="caption" style="margin-top: var(--s4)">Example collections from the sample library.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-pick" aria-labelledby="tab-pick" tabindex="0" hidden>
+        <div class="picks">
+          <div class="pick"><img src="assets/covers/klara.jpg" alt="Klara and the Sun by Kazuo Ishiguro" loading="lazy" width="296" height="450"><p><b>Klara and the Sun</b>You rated Kazuo Ishiguro 5 on average</p></div>
+          <div class="pick"><img src="assets/covers/chemistry.jpg" alt="Lessons in Chemistry by Bonnie Garmus" loading="lazy" width="328" height="500"><p><b>Lessons in Chemistry</b>You finish a lot of literary fiction</p></div>
+          <div class="pick"><img src="assets/covers/copperhead.jpg" alt="Demon Copperhead by Barbara Kingsolver" loading="lazy" width="331" height="500"><p><b>Demon Copperhead</b>You finish a lot of literary fiction</p></div>
+          <div class="pick"><img src="assets/covers/babel.jpg" alt="Babel by R. F. Kuang" loading="lazy" width="329" height="500"><p><b>Babel</b>You finish a lot of fantasy</p></div>
+        </div>
+        <p class="caption" style="margin-top: var(--s4)">Picks and reasons as Discover shows them for the sample library. “Not now” hides a pick for 30 days.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-series" aria-labelledby="tab-series" tabindex="0" hidden>
+        <div class="series">
+          <div class="series-row">
+            <figure><img src="assets/covers/dune.jpg" alt="Dune by Frank Herbert" loading="lazy" width="265" height="475"><figcaption>Book 1</figcaption></figure>
+            <figure><img src="assets/covers/fourth.jpg" alt="Fourth Wing by Rebecca Yarros" loading="lazy" width="329" height="500"><figcaption>Book 1</figcaption></figure>
+          </div>
+          <div class="ed-copy">
+            <h3 class="h3">Series, built from your library.</h3>
+            <p class="body">Each series gets its own page with your progress and the next book in line, so you always know where to pick up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy -->
+<section class="section" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 class="h2" id="privacy-title">Your library belongs to you.</h2>
+      <p class="lede">BookerLife keeps your reading on your devices. There is nothing to sign up for, and nothing is sent to us.</p>
+    </div>
+    <div class="promises">
+      <div class="promise"><h3>No BookerLife account</h3><p>There is nothing to sign up for.</p></div>
+      <div class="promise"><h3>No BookerLife servers</h3><p>We never receive your books, readings or notes.</p></div>
+      <div class="promise"><h3>No analytics or ads</h3><p>No tracking of any kind.</p></div>
+      <div class="promise"><h3>Stored on your device</h3><p>Your library lives on your iPhone or Mac, with daily local snapshots you can restore.</p></div>
+      <div class="promise"><h3>Your own iCloud</h3><p>If you turn on iCloud sync, your library syncs through your private iCloud database, which only you can read.</p></div>
+      <div class="promise"><h3>Export any time</h3><p>Everything as JSON or a Goodreads-style CSV, free.</p></div>
+    </div>
+    <p class="fineprint">To find books, covers and descriptions, the app contacts Open Library, Wikidata and Wikipedia directly from your device (and Apple’s iTunes Search in builds where it is turned on), sending only the ISBN, title, author or search words involved. <a class="link" href="privacy.html">Read the full Privacy Policy</a></p>
+  </div>
+</section>
+
+<!-- Plus -->
+<section class="section" id="plus" aria-labelledby="plus-title">
+  <div class="wrap plus">
+    <div class="ed-copy" data-reveal>
+      <h2 class="h2" id="plus-title">BookerLife Plus</h2>
+      <p class="lede">For when you want more. The free app is meant to be complete: every book, every chart, import, export and sync. Plus adds depth, personal touches and the things you’ll want to show off.</p>
+      <div class="free-note"><b>Nothing is taken away.</b> If Plus ends, everything you made stays. Prices will be shown in the App Store at launch.</div>
+    </div>
+    <ul class="perk-list" role="list" data-reveal>
+      <li>All six shelf looks and the decorative objects <span>Shelf</span></li>
+      <li>Unlimited named shelves <span>Shelf</span></li>
+      <li>Smart collections <span>Library</span></li>
+      <li>Reading plans, with missed days spread forward <span>Reading</span></li>
+      <li>Unlimited quote scans <span>10 a month free</span></li>
+      <li>All six ambient sounds, layering and a sleep timer <span>2 sounds free</span></li>
+      <li>Unlimited challenges and templates <span>1 challenge free</span></li>
+      <li>The full Wrapped pack, Paper look and clean share images <span>Sharing</span></li>
+      <li>A custom Home layout and the Reading Goal widget <span>Home</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="wrap" data-reveal>
+    <img class="icon" src="assets/img/icon-512.png" width="112" height="112" alt="BookerLife app icon" loading="lazy">
+    <h2 class="h2" id="closing-title">A home for every story you’ve loved.</h2>
+    <p class="lede">BookerLife is in testing now, and coming to iPhone and Mac.</p>
+    <div class="actions">
+      <span class="status">Coming to iPhone and Mac</span>
+      <a class="btn btn-quiet" href="support.html">Visit Support</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>BookerLife is an independent app for iPhone and Mac. No account, no ads, no tracking.</p>
+    <nav aria-label="Footer"><ul role="list"><li><a href="./">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="support.html">Support</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>

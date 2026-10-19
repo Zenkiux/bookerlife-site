@@ -1,17 +1,272 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght,SOFT@9..144,400..600,0..100&display=swap"><link rel="stylesheet" href="style.css"><title>Support · BookerLife</title><meta name="description" content="Help with importing, iCloud sync, purchases and your data in BookerLife."></head><body><main class="page">
-<header class="head"><img src="icon.png" alt=""><a class="name" href="index.html">BookerLife</a><nav aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html" aria-current="page">Support</a></nav></header>
-<h1>Support</h1>
-<p class="lede">Answers to the questions people ask most. If yours isn't here, get in touch at the end of the page.</p>
-<h2>Bring your books from Goodreads or StoryGraph</h2>
-<p>Export a CSV from Goodreads (My Books → Import and export) or StoryGraph (Manage account → Export). In BookerLife, open <kbd>Settings</kbd> → <kbd>Import</kbd>, pick the file, check the preview, then import. Covers are filled in on their own afterwards.</p>
-<h2>Sync between iPhone and Mac</h2>
-<p>Sign in to the same Apple account with iCloud on, on each device, then turn on <kbd>Settings</kbd> → <kbd>iCloud</kbd> in BookerLife on each one. The first sync shows a review list before anything is merged, and it can be undone for 30 days.</p>
-<h2>Fix a wrong cover or edition</h2>
-<p>Open the book, choose the <kbd>Details</kbd> tab, then tap <kbd>Edition</kbd> to pick another edition or correct the title, author and page count. Library Health, under Library, lists books with missing details and possible duplicates.</p>
-<h2>Restore a purchase</h2>
-<p>Open <kbd>Settings</kbd> → <kbd>BookerLife Plus</kbd> → <kbd>Restore purchases</kbd> while signed in to the Apple account you bought with. To cancel a subscription, use your Apple account's subscription settings.</p>
-<h2>Export or delete your data</h2>
-<p><kbd>Settings</kbd> → <kbd>Export</kbd> saves everything as JSON or a Goodreads-style CSV. <kbd>Settings</kbd> → <kbd>Delete all my data</kbd> removes it from the device and your iCloud.</p>
-<h2>Contact</h2>
-<p>Open an issue at <a href="https://github.com/Zenkiux/bookerlife-site/issues">github.com/Zenkiux/bookerlife-site/issues</a>. Issues are public, so leave out anything personal.</p>
-<footer class="foot">BookerLife is an independent app for iPhone and Mac. No account, no ads, no tracking.</footer></main></body></html>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · BookerLife</title>
+<meta name="description" content="Help with BookerLife: adding and importing books, editions, reading progress, iCloud sync, BookerLife Plus, exporting and deleting your data.">
+<meta name="theme-color" content="#100E15">
+<link rel="canonical" href="https://zenkiux.github.io/bookerlife-site/support.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BookerLife">
+<meta property="og:title" content="BookerLife Support">
+<meta property="og:description" content="Find answers, learn BookerLife, and get back to reading.">
+<meta property="og:url" content="https://zenkiux.github.io/bookerlife-site/support.html">
+<meta property="og:image" content="https://zenkiux.github.io/bookerlife-site/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/support.css">
+<script>document.documentElement.className = "js";</script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/support.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="BookerLife home"><img src="assets/img/icon-160.png" alt="" width="30" height="30">BookerLife</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" data-menu><span></span><span></span><span class="sr-only">Menu</span></button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="./#reading">Features</a></li>
+      <li><a href="./#shelf">The Bookshelf</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html" aria-current="page">Support</a></li>
+      <li class="status-item"><span class="status">Coming to iPhone and Mac</span></li>
+    </ul>
+    <span class="status">Coming to iPhone and Mac</span>
+  </div>
+</header>
+
+<main id="main">
+  <header class="doc-head kb-head">
+    <div class="wrap">
+      <h1 class="display">How can we help?</h1>
+      <p class="lede">Find answers, learn BookerLife, and get back to reading.</p>
+      <form class="kb-search" role="search" data-search hidden onsubmit="return false">
+        <label class="sr-only" for="q">Search help articles</label>
+        <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Search help, like “import” or “iCloud”" autocomplete="off" spellcheck="false" aria-describedby="kb-count">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+      <div class="kb-filters" role="group" aria-label="Filter by topic" data-filters hidden>
+        <button type="button" aria-pressed="true" data-cat="">All topics</button>
+        <button type="button" aria-pressed="false" data-cat="getting-started">Getting started</button>
+        <button type="button" aria-pressed="false" data-cat="importing">Importing books</button>
+        <button type="button" aria-pressed="false" data-cat="library">Library and editions</button>
+        <button type="button" aria-pressed="false" data-cat="reading">Reading and progress</button>
+        <button type="button" aria-pressed="false" data-cat="icloud">iCloud sync</button>
+        <button type="button" aria-pressed="false" data-cat="plus">Plus and purchases</button>
+        <button type="button" aria-pressed="false" data-cat="data">Exporting and deleting</button>
+        <button type="button" aria-pressed="false" data-cat="troubleshooting">Troubleshooting</button>
+      </div>
+      <p class="kb-count caption" id="kb-count" aria-live="polite" data-count></p>
+    </div>
+  </header>
+
+  <div class="wrap kb">
+
+    <section class="kb-cat" id="getting-started" data-cat="getting-started" aria-labelledby="c-start">
+      <h2 class="kb-cat-title" id="c-start">Getting started</h2>
+      <details class="article" id="add-a-book" data-keywords="add search scan barcode isbn manual hand cover photo discover new book">
+        <summary><span>Add a book</span></summary>
+        <div class="answer">
+          <p>Open <kbd>Discover</kbd> and search by title, author or ISBN. Under <kbd>Quick add</kbd>, <kbd>Scan barcode</kbd> reads a book’s barcode with the camera, and <kbd>Add by hand</kbd> lets you enter a book yourself, with a photo of its cover.</p>
+          <p>Book details come from Open Library. Barcode scanning happens on your device.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#not-found">The book I want isn’t found</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="log-progress" data-keywords="log pages percent progress timer session continue reading today update">
+        <summary><span>Log your reading</span></summary>
+        <div class="answer">
+          <p>On <kbd>Today</kbd>, tap <kbd>Log</kbd> next to the book you are reading to record the page you reached or a percentage. Tap <kbd>Continue reading</kbd> to start a reading session with a timer instead; when you stop, the session is saved with the pages you read.</p>
+          <p>Every action can be undone.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#widgets">Widgets and the Live Activity</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="set-goal" data-keywords="goal yearly monthly target books pages minutes challenge streak pace">
+        <summary><span>Set a reading goal</span></summary>
+        <div class="answer">
+          <p>Open <kbd>Settings</kbd> → <kbd>Yearly goal</kbd> under <kbd>Reading</kbd>. A goal can count books, pages or minutes, for the year or for a month, and shows your pace and a forecast.</p>
+          <p>Streaks and badges are opt-in. Challenges only count up; nothing is ever taken away for missing a day.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="importing" data-cat="importing" aria-labelledby="c-import">
+      <h2 class="kb-cat-title" id="c-import">Importing books</h2>
+      <details class="article" id="import-goodreads" data-keywords="goodreads storygraph csv import export move switch bring history">
+        <summary><span>Bring your books from Goodreads or StoryGraph</span></summary>
+        <div class="answer">
+          <p>Export a CSV from Goodreads (My Books → Import and export) or StoryGraph (Manage account → Export). In BookerLife, open <kbd>Settings</kbd> → <kbd>Import from Goodreads or StoryGraph</kbd>, pick the file, check the preview, then import. Covers are filled in on their own afterwards.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#cover-missing">A cover is missing or wrong</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="import-kindle" data-keywords="kindle highlights clippings my clippings notebook readwise csv quotes import">
+        <summary><span>Import your Kindle highlights</span></summary>
+        <div class="answer">
+          <p>Open <kbd>Settings</kbd> → <kbd>Import from Goodreads or StoryGraph</kbd>, then use <kbd>Choose a File…</kbd> on the <kbd>Highlights from Kindle</kbd> card. BookerLife reads a Kindle <em>My Clippings.txt</em> file, a Kindle notebook export (HTML) or a highlights CSV. You see a preview first, highlights already in your journal are skipped, and each import can be undone.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="library" data-cat="library" aria-labelledby="c-library">
+      <h2 class="kb-cat-title" id="c-library">Library and editions</h2>
+      <details class="article" id="fix-edition" data-keywords="wrong cover edition title author page count change details correct fix">
+        <summary><span>Fix a wrong cover or edition</span></summary>
+        <div class="answer">
+          <p>Open the book, choose the <kbd>Details</kbd> tab, then tap <kbd>Edition</kbd> to pick another edition or correct the title, author and page count. Library Health, under Library, lists books with missing details and possible duplicates.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#library-health">Find missing details and duplicates</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="library-health" data-keywords="library health duplicates missing details tidy clean up merge">
+        <summary><span>Find missing details and duplicates</span></summary>
+        <div class="answer">
+          <p>Library Health, under <kbd>Library</kbd>, finds books with missing details and possible duplicates. You decide every fix, and every change can be undone.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="lend-a-book" data-keywords="lend loan borrow friend due date reminder copy my copy">
+        <summary><span>Lend a book and get a reminder</span></summary>
+        <div class="answer">
+          <p>Open the book and choose <kbd>My copy</kbd>, then <kbd>Lend</kbd>. Add who has it and, if you like, when it is due back; turn on <kbd>Remind me on the due date</kbd> for a reminder. The book keeps a history of its loans.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="reading" data-cat="reading" aria-labelledby="c-reading">
+      <h2 class="kb-cat-title" id="c-reading">Reading and progress</h2>
+      <details class="article" id="audio-and-print" data-keywords="audiobook audio listening print mixed format both minutes speed">
+        <summary><span>Track an audiobook, or print and audio together</span></summary>
+        <div class="answer">
+          <p>One reading can mix print and audio, each with its own length. Pages come only from print sessions and listening time only from audio sessions, and the book is counted once in your stats. Listening-speed options show the time left at your speed.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="rereads" data-keywords="reread again second time pause did not finish dnf rating stars">
+        <summary><span>Rereads, pauses and books you didn’t finish</span></summary>
+        <div class="answer">
+          <p>Each time you read a book is kept as its own reading, with its own dates, rating and review. You can also pause a book or mark it as did-not-finish with a reason. Ratings go in quarter stars.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="widgets" data-keywords="widget home screen lock screen live activity timer stop 10 pages">
+        <summary><span>Widgets and the Live Activity</span></summary>
+        <div class="answer">
+          <p>On iPhone, the <kbd>Reading Now</kbd> widget shows your current book and can add ten pages with a tap. While a reading session runs, a Live Activity shows the timer on the Lock Screen, with a Stop button. Add widgets the usual way: touch and hold the Home Screen, tap <kbd>Edit</kbd>, then <kbd>Add Widget</kbd>, and choose BookerLife.</p>
+          <p>The Reading Goal widget is part of BookerLife Plus.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="icloud" data-cat="icloud" aria-labelledby="c-icloud">
+      <h2 class="kb-cat-title" id="c-icloud">iCloud sync</h2>
+      <details class="article" id="sync" data-keywords="icloud sync iphone mac devices apple account turn on">
+        <summary><span>Sync between iPhone and Mac</span></summary>
+        <div class="answer">
+          <p>Sign in to the same Apple account with iCloud on, on each device, then turn on <kbd>Settings</kbd> → <kbd>iCloud Sync</kbd> in BookerLife on each one. The first sync shows a review list before anything is merged, and it can be undone for 30 days.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#undo-first-sync">Undo the first sync</a>, <a href="#sync-trouble">Books aren’t syncing</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="undo-first-sync" data-keywords="undo first sync revert merge icloud mistake 30 days">
+        <summary><span>Undo the first sync</span></summary>
+        <div class="answer">
+          <p>Open <kbd>Settings</kbd> → <kbd>iCloud Sync</kbd> and choose <kbd>Undo First Sync…</kbd>, available for 30 days after the first sync. This device goes back to the library it had before the first sync, and iCloud sync turns off. What is in iCloud stays as it is.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="plus" data-cat="plus" aria-labelledby="c-plus">
+      <h2 class="kb-cat-title" id="c-plus">BookerLife Plus and purchases</h2>
+      <details class="article" id="restore-purchase" data-keywords="restore purchase plus subscription cancel refund apple account bought">
+        <summary><span>Restore a purchase or cancel a subscription</span></summary>
+        <div class="answer">
+          <p>Open <kbd>Settings</kbd> → <kbd>BookerLife Plus</kbd> and tap <kbd>Restore</kbd> while signed in to the Apple account you bought with. To cancel a subscription, use your Apple account’s subscription settings.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="what-stays-free" data-keywords="free plus difference what do i get downgrade lose data keep">
+        <summary><span>What stays free, and what happens if Plus ends</span></summary>
+        <div class="answer">
+          <p>Books, search, scanning, import and export, backups, iCloud sync, reading sessions, every Insights chart, goals, the journal and one shelf are free. Plus adds more shelves and looks, smart collections, reading plans, unlimited quote scans and challenges, more ambient sounds and the full Wrapped pack.</p>
+          <p>If Plus ends, nothing you made is deleted.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="data" data-cat="data" aria-labelledby="c-data">
+      <h2 class="kb-cat-title" id="c-data">Exporting and deleting your data</h2>
+      <details class="article" id="export-delete" data-keywords="export json csv goodreads backup delete all data remove erase">
+        <summary><span>Export or delete your data</span></summary>
+        <div class="answer">
+          <p>In <kbd>Settings</kbd>, <kbd>Export everything</kbd> saves your whole library as JSON, and <kbd>Export as Goodreads CSV</kbd> saves a spreadsheet other apps can import. <kbd>Settings</kbd> → <kbd>Delete All Data</kbd> removes it from the device and your iCloud; you type DELETE to confirm. Export first if you want a copy.</p>
+          <div class="article-foot"><p class="related">Related: <a href="privacy.html#deleting-your-data">Privacy Policy: deleting your data</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="recover-deleted" data-keywords="recover restore deleted trash recently deleted snapshot backup undo mistake">
+        <summary><span>Get back something you deleted</span></summary>
+        <div class="answer">
+          <p>Deleted books stay in <kbd>Settings</kbd> → <kbd>Recently Deleted</kbd> for 30 days, where you can restore them. BookerLife also keeps daily snapshots on your device; pick one under <kbd>Restore a snapshot</kbd> in Settings to take your library back to it.</p>
+          <div class="article-foot"><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="kb-cat" id="troubleshooting" data-cat="troubleshooting" aria-labelledby="c-trouble">
+      <h2 class="kb-cat-title" id="c-trouble">Troubleshooting</h2>
+      <details class="article" id="cover-missing" data-keywords="cover missing blank wrong image picture not showing">
+        <summary><span>A cover is missing or wrong</span></summary>
+        <div class="answer">
+          <p>Covers are looked up on their own and can take a little while after an import, especially for a large library. If a book still has no cover or the wrong one, pick another edition.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#fix-edition">Fix a wrong cover or edition</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="not-found" data-keywords="not found search no results missing book can't find">
+        <summary><span>The book I want isn’t found</span></summary>
+        <div class="answer">
+          <p>Try the ISBN from the back of the book, or scan its barcode. If it still isn’t found, use <kbd>Add by hand</kbd> in Discover and add a photo of the cover.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#add-a-book">Add a book</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+      <details class="article" id="sync-trouble" data-keywords="sync not working icloud missing books other device not syncing">
+        <summary><span>Books aren’t syncing between devices</span></summary>
+        <div class="answer">
+          <p>Check that each device is signed in to the same Apple account with iCloud on, and that <kbd>Settings</kbd> → <kbd>iCloud Sync</kbd> is turned on in BookerLife on each one. Sync starts the next time you open BookerLife, so close and reopen the app after turning it on.</p>
+          <div class="article-foot"><p class="related">Related: <a href="#sync">Sync between iPhone and Mac</a></p><button type="button" class="copy" data-copy>Copy link</button></div>
+        </div>
+      </details>
+    </section>
+
+    <div class="kb-empty" data-empty hidden>
+      <h2 class="h3">No answers match “<span data-empty-q></span>”.</h2>
+      <p class="body">Try a shorter word such as “import”, “cover” or “sync”, or <button type="button" class="link-btn" data-clear>show all topics</button>. If your question isn’t covered, ask us below.</p>
+    </div>
+
+    <section class="kb-contact" id="contact" aria-labelledby="contact-title">
+      <h2 class="h2" id="contact-title">Still need help?</h2>
+      <p class="lede">Open an issue on GitHub and we will answer there.</p>
+      <div class="warning" role="note">
+        <b>GitHub issues are public.</b> Anyone can read them. Leave out your name, email address, Apple account details, purchase receipts and anything else personal.
+      </div>
+      <p class="contact-actions"><a class="btn btn-primary" href="https://github.com/Zenkiux/bookerlife-site/issues" rel="noopener">Open an issue on GitHub<span class="sr-only"> (external site)</span></a></p>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>BookerLife is an independent app for iPhone and Mac. No account, no ads, no tracking.</p>
+    <nav aria-label="Footer"><ul role="list"><li><a href="./">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="support.html" aria-current="page">Support</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -47,6 +47,7 @@ a:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-
 /* Running head: the book's name and its other parts. */
 .head {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: .75rem;
   font: 500 .9375rem/1 var(--sans);
@@ -55,7 +56,7 @@ a:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-
 }
 .head img { width: 28px; height: 28px; border-radius: 7px; }
 .head .name { color: var(--ink); text-decoration: none; font-weight: 600; margin-right: auto; }
-.head nav { display: flex; gap: 1.25rem; }
+.head nav { display: flex; gap: 1rem; }
 .head nav a { color: var(--muted); text-decoration: none; }
 .head nav a[aria-current="page"] { color: var(--ink); }
 .head nav a:hover { color: var(--violet); }
